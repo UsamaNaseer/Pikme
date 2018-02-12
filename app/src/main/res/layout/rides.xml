@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rideLay"
+    android:clickable="true"
+    android:background="@color/backgroundColor"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Going somewhere?"
+            android:id="@+id/somewheretext"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/logintext"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/somewheretext"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:text="Share your travel costs with our "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/lt2"
+            android:layout_below="@+id/logintext"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:text="trusted community "/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/lt2"
+            android:layout_marginTop="30dp"
+            android:id="@+id/seperator"
+            android:background="@drawable/home_separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/seperator"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/offerride"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/offeraride_btn"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:id="@+id/findride"
+                android:layout_height="wrap_content"
+                android:background="@drawable/findaride_sel_btn"
+                />
+        </LinearLayout>
+    </RelativeLayout>

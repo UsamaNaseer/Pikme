@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/AppTheme"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@color/blue">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/burger"
+            android:background="@drawable/back_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a Car"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            >
+        </TextView>
+
+    </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/my_toolbar"
+    android:orientation="vertical"
+    android:background="@drawable/add_car_fields_bg"
+    android:layout_margin="20dp"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/carImg"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/upload_car_img"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Car number"
+        android:paddingLeft="20dp"
+        android:layout_margin="5dp"
+        android:textSize="16sp"
+        android:textColorHint="@color/lightGrey"
+        android:background="@android:color/transparent"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_margin="5dp"
+        android:hint="Model"
+        android:textSize="16sp"
+        android:textColorHint="@color/lightGrey"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/dropdown_arrow"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_margin="5dp"
+        android:hint="Color"
+        android:textSize="16sp"
+        android:textColorHint="@color/lightGrey"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/dropdown_arrow"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_margin="5dp"
+        android:hint="Brand"
+        android:textSize="16sp"
+        android:textColorHint="@color/lightGrey"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/dropdown_arrow"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_margin="5dp"
+        android:hint="Upload License"
+        android:textSize="16sp"
+        android:textColorHint="@color/lightGrey"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/attach_icon"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD NOW"
+        android:layout_margin="35dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_btn"/>
+
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/iten_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        >
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/chat_bubble_user"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="Hey There! I'm just about to reach out there.. Be Ready!"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="65dp"
+            android:background="@drawable/driver_avatar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/iten_head1"
+        android:layout_below="@id/iten_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+
+        >
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1.2"
+        android:layout_height="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_height="20dp"
+            android:id="@+id/time"
+            android:text="12:30PM"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/chat_time_check"
+            />
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

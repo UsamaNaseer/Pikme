@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navDrawer"
+    android:background="@drawable/sidemenu_bg"
+    tools:context="com.asadbaig.android.pikme.navigationDrawer">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="30dp"
+        android:id="@+id/cancel"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/cross_icon"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Lin"
+        android:layout_below="@+id/cancel"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_gravity="end"
+            android:src="@drawable/sidemenu_avatar"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+          android:layout_marginLeft="-10dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shayan Nasir"
+                android:id="@+id/username"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ma_shayan@hotmail.co.uk"
+                android:id="@+id/email"
+                android:layout_below="@+id/username"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/Lin"
+        >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:drawableLeft="@drawable/notification"
+                android:drawablePadding="30dp"
+                android:id="@+id/tvNotify"
+                android:layout_marginBottom="10dp"
+                android:text="Notifications"
+                android:background="?attr/selectableItemBackground"
+                android:textSize="16dp"
+                android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/tvEditCar"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/edit_car"
+            android:drawablePadding="30dp"
+            android:text="Edit Car Info"
+            android:background="?attr/selectableItemBackground"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTransaction"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@drawable/transactions"
+            android:drawablePadding="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="Transactions"
+            android:textSize="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/tvTerms"
+            android:drawableLeft="@drawable/terms_conditions"
+            android:drawablePadding="30dp"
+            android:text="Terms And Conditions"
+            android:textSize="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/tvPolicy"
+            android:layout_marginLeft="30dp"
+            android:drawableLeft="@drawable/privacy_policy"
+            android:drawablePadding="30dp"
+            android:text="Privacy Policy"
+            android:textSize="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSettings"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@drawable/settings"
+            android:drawablePadding="30dp"
+            android:text="Settings "
+            android:background="?attr/selectableItemBackground"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/tvLogout"
+            android:drawableLeft="@drawable/logout"
+            android:drawablePadding="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:text="Logout"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

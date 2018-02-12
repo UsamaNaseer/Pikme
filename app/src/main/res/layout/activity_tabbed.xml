@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.asadbaig.android.pikme.tabbedActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--app:layout_scrollFlags="scroll|enterAlways"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+        <!--</android.support.v7.widget.Toolbar>-->
+        <include layout="@layout/toolbar"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+    </android.support.v4.view.ViewPager>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/footer"
+        android:orientation="horizontal"
+        android:background="@drawable/tabs_bg"
+        android:layout_gravity="bottom">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+
+            android:layout_margin="10dp"
+            android:id="@+id/rlRides"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/ride"
+                android:background="@drawable/ride"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rides"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:id="@+id/rideText"
+                android:layout_below="@+id/ride"/>
+            
+            
+            
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/rlSearch"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/rlRides"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/search"
+                android:background="@drawable/search"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:id="@+id/searchText"
+                android:layout_below="@+id/search"/>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+         android:layout_centerInParent="true"
+            android:id="@+id/rlOffer"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/add"
+                android:background="@drawable/offer_ride"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offer"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/addtext"
+                android:layout_below="@+id/add"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/rlProfile"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/rlInbox"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/inbox"
+                android:background="@drawable/inbox"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:id="@+id/inboxText"
+                android:layout_below="@+id/inbox"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+         android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rlProfile"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/profile"
+                android:background="@drawable/profile"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:id="@+id/profileText"
+                android:layout_below="@+id/profile"/>
+
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="end|bottom"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</android.support.design.widget.CoordinatorLayout>

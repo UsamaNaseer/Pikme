@@ -1,0 +1,59 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <include layout="@layout/current_rides_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/header_bg"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+
+            android:layout_height="80dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="6dp"
+             android:layout_gravity="center_vertical|center_horizontal"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"/>
+
+            <View
+                android:layout_marginLeft="65dp"
+                android:layout_width="120dp"
+                android:layout_height="6dp"
+                android:background="@color/white"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/darkGrey"
+                android:textSize="25sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+<include layout="@layout/list_item_current"/>
+    <include layout="@layout/list_item_current"/>
+
+
+</LinearLayout>

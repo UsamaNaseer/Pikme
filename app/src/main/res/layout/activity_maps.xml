@@ -1,0 +1,357 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_map" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/rlMapView">
+
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+                <ImageView
+                    android:id="@+id/iv_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_location_pin"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlCarLoc"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/rlcarInfo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/car_info_bg"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_margin="5dp"
+                            android:id="@+id/carImage"
+                            android:src="@drawable/driver_car"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/carImage"
+                            android:text="Mike Smith"
+                            android:id="@+id/driverName"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:layout_margin="5dp"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/chat"
+                            android:src="@drawable/chat_icon"
+                            android:layout_marginRight="-5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/carSpecs"
+                            android:layout_toRightOf="@+id/carImage"
+                            android:text="Suzuki Cultus 2018- Blue Color- 4seats"
+                            android:layout_below="@+id/driverName"
+                            android:textSize="12sp"
+                            android:textColor="@color/darkGrey"
+                            android:layout_marginLeft="5dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_below="@+id/carSpecs"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Card payment"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:layout_margin="10dp"
+                                android:textAlignment="center"
+                                android:paddingLeft="20dp"
+                                android:drawablePadding="-20dp"
+                                android:drawableLeft="@drawable/card_payment_icon"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="5dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cash Rs 242.58"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:paddingLeft="20dp"
+                                android:layout_margin="10dp"
+                                android:textAlignment="center"
+                                android:drawablePadding="-20dp"
+                                android:drawableLeft="@drawable/cash_payment_icon"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="5dp"
+                                />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rlLocation"
+                        android:layout_marginTop="-15dp"
+                        android:layout_below="@+id/rlcarInfo"
+                        android:background="@drawable/location_info_bg"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tariq Road, Karachi"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:layout_marginTop="30dp"
+                            android:paddingLeft="50dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="15dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shah Faisal colony"
+                            android:layout_weight="1"
+                            android:textSize="16sp"
+                            android:paddingLeft="50dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="15dp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_sendRq"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_below="@+id/rlLocation"
+                        android:textColor="@color/white"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_btn"
+                        android:text="SEND REQUEST"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/rlAccept">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/acceptCan"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/white">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shayan Nasir"
+                            android:textColor="@color/black"
+                            android:id="@+id/Passname"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/chat_btn"
+                            android:src="@drawable/chat_icon"
+                            android:layout_marginRight="-5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pickup Location- Shah Faisal Colony, Block-2"
+                            android:textColor="@color/darkGrey"
+                            android:id="@+id/passloc"
+                            android:textSize="14sp"
+                            android:layout_below="@+id/Passname"
+                            android:layout_marginLeft="20dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rlOriginDes"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:layout_below="@+id/passloc"
+                            android:background="@drawable/location_info_bg"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tariq Road, Karachi"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:layout_marginTop="30dp"
+                                android:paddingLeft="50dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/blue"
+                                android:layout_marginStart="15dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Shah Faisal colony"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:paddingLeft="50dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:layout_marginStart="15dp"
+                                />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/acceptCan"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="ACCEPT"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:id="@+id/btn_accept"
+                            android:padding="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="-10dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:background="@drawable/accept_btn"/>
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:text="CANCEL"
+                            android:textStyle="bold"
+                            android:id="@+id/btn_cancel"
+                            android:layout_gravity="center"
+                            android:padding="15dp"
+                            android:layout_marginRight="-10dp"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:background="@drawable/cancel_btn"/>
+
+
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_pickMe"
+                    android:textAlignment="center"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_btn"
+                    android:text="PICK ME!"/>
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_finishN"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:layout_margin="20dp"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:background="@drawable/bg_btn"
+                    android:text="FINISH NOW!"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.DrawerLayout>

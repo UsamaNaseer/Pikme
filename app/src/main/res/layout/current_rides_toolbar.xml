@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/AppTheme"
+        android:background="@color/blue">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/menu_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Rides"
+            android:textColor="@color/white"
+            android:id="@+id/changetext"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            >
+        </TextView>
+
+    </android.support.v7.widget.Toolbar>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/iten_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/recent_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shah Faisal Colony >> Defence Phase 7"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:id="@+id/searched_place_name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 December 2017 - After 11:00 1 `seat"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkGrey"
+                android:id="@+id/searched_place_detail"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/iten_head"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/darkGrey"/>
+
+</RelativeLayout>

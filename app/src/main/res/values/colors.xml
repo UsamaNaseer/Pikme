@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="black">#202020</color>
+    <color name="blue">#04bbe4</color>
+    <color name="darkGrey">#7b8688</color>
+    <color name="lightGrey">#cccccc</color>
+    <color name="dropshadowColor">#032c35</color>
+    <color name="backgroundColor">#f6fdff</color>
+    <color name="separatorColor">#e5e5e5</color>
+    <color name="recentSearchTimeIconColor"> #e5e5e5</color>
+    <color name="cancelRedColor">#f10505</color>
+    <color name="offwhite">#ffdfff</color>
+    <color name="white">#ffffff</color>
+    <color name="colorAccent">#000000</color>
+
+</resources>
