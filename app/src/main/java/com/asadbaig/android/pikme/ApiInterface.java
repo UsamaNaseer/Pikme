@@ -13,8 +13,8 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-  //  @GET("posts/")
-  //  Call<Data> getData(@Query("q") String status);
+    @GET("getProfile/")
+    Call<GetProfileResposeModel> getData(@Query("user_id") int id);
 
 
 }

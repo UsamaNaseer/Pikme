@@ -1,5 +1,7 @@
 package com.asadbaig.android.pikme;
 
+import com.google.android.gms.common.api.Api;
+
 import retrofit2.Retrofit;
 
 /**
@@ -7,9 +9,9 @@ import retrofit2.Retrofit;
  */
 
 public class RetrofitBuilder {
-    Retrofit retrofit = new Retrofit.Builder()
+    static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://api.github.com/")
             .build();
 
-    GitHubService service = retrofit.create(GitHubService.class);
+
 }

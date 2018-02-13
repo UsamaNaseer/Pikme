@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Asad Baig on 1/30/2018.
@@ -35,7 +38,24 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
                         startActivity(i);
                 }
         });
+
+        ApiInterface service = RetrofitBuilder.retrofit.create(ApiInterface.class);
+        Call<GetProfileResposeModel> call = service.getData(1);
+        call.enqueue(new Callback<GetProfileResposeModel>() {
+                @Override
+                public void onResponse(Call<GetProfileResposeModel> call, Response<GetProfileResposeModel> response) {
+
+                }
+
+                @Override
+                public void onFailure(Call<GetProfileResposeModel> call, Throwable t) {
+
+                }
+        });
+
         return rootView;}
+
+
 
         }
 
