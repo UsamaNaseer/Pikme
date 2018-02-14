@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
 import retrofit2.Call;
@@ -16,8 +17,9 @@ import retrofit2.Response;
  * Created by Asad Baig on 1/30/2018.
  */
 
-public class FragProfile extends android.support.v4.app.Fragment {
+public class FragProfile extends android.support.v4.app.Fragment{
 ImageView burger;
+TextView name,email,pass,mobilenum;
 
 public FragProfile() {
         // Required empty public constructor
@@ -30,6 +32,13 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
         Calligrapher calligrapher=new Calligrapher(getActivity());
         calligrapher.setFont(getActivity(),"Lato-Semibold.ttf",true);
         burger=(ImageView) rootView.findViewById(R.id.burger);
+        name=(TextView) rootView.findViewById(R.id.reserved_seat);
+        email=(TextView) rootView.findViewById(R.id.reserved_seat1);
+        pass=(TextView) rootView.findViewById(R.id.reserved_seat2);
+        mobilenum=(TextView) rootView.findViewById(R.id.reserved_seat3);
+
+
+
 
         burger.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -40,10 +49,16 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
         });
 
         ApiInterface service = RetrofitBuilder.retrofit.create(ApiInterface.class);
-        Call<GetProfileResposeModel> call = service.getData(1);
+        Call<GetProfileResposeModel> call = service.getProfileData(1);
         call.enqueue(new Callback<GetProfileResposeModel>() {
                 @Override
                 public void onResponse(Call<GetProfileResposeModel> call, Response<GetProfileResposeModel> response) {
+                        GetProfileResposeModel getProfileResposeModel = response.body();
+                        name.setText(getProfileResposeModel.getFname());
+                        email.setText(getProfileResposeModel.getEmail());
+                        pass.setText(getProfileResposeModel.getPassword());
+                        mobilenum.setText(getProfileResposeModel.getNumber());
+
 
                 }
 
@@ -54,6 +69,8 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
         });
 
         return rootView;}
+
+
 
 
 

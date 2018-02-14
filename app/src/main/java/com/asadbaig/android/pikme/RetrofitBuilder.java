@@ -3,6 +3,7 @@ package com.asadbaig.android.pikme;
 import com.google.android.gms.common.api.Api;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by usamanaseer on 12/02/2018.
@@ -10,7 +11,8 @@ import retrofit2.Retrofit;
 
 public class RetrofitBuilder {
     static Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("https://api.github.com/")
+            .baseUrl("http://service.piknow.com/")
+            .addConverterFactory(GsonConverterFactory.create())
             .build();
 
 
