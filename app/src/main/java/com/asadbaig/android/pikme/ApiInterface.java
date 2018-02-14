@@ -13,8 +13,15 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-    @GET("services.asmx/getProfile?op=getProfile")
+    @GET("getProfile?op=getProfile")
     Call<GetProfileResposeModel> getProfileData(@Query("user_id") int id);
+
+    @GET("getColors?op=getColors")
+    Call<ListGetColorModel> getColorData();
+
+    @GET("getRides?op=getRides")
+    Call<GetRidesResponseModel> getRidesData(@Query("user_id") int id);
+
 
 
 }

@@ -119,7 +119,7 @@ public class GetProfileResposeModel {
         @Override
         public String toString(){
             return
-                    "Response{" +
+                    "Profile Response{" +
                             "birthday = '" + birthday + '\'' +
                             ",country = '" + country + '\'' +
                             ",fname = '" + fname + '\'' +

@@ -68,6 +68,19 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 }
         });
 
+        Call<ListGetColorModel> call1 = service.getColorData();
+        call1.enqueue(new Callback<ListGetColorModel>() {
+                @Override
+                public void onResponse(Call<ListGetColorModel> call, Response<ListGetColorModel> response) {
+
+                }
+
+                @Override
+                public void onFailure(Call<ListGetColorModel> call, Throwable t) {
+
+                }
+        });
+
         return rootView;}
 
 

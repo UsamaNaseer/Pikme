@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitBuilder {
     static Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://service.piknow.com/")
+            .baseUrl("http://service.piknow.com/services.asmx/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 

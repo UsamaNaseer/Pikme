@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Asad Baig on 1/21/2018.
@@ -38,6 +41,25 @@ findRide.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+
+
+        ApiInterface service = RetrofitBuilder.retrofit.create(ApiInterface.class);
+        Call<GetRidesResponseModel> call = service.getRidesData(2);
+        call.enqueue(new Callback<GetRidesResponseModel>() {
+            @Override
+            public void onResponse(Call<GetRidesResponseModel> call, Response<GetRidesResponseModel> response) {
+                GetRidesResponseModel getRidesResponseModel = response.body();
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<GetRidesResponseModel> call, Throwable t) {
+
+            }
+        });
+
 
 
         return rootView;}
