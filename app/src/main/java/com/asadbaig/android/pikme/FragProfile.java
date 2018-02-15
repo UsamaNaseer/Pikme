@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import me.anwarshahriar.calligrapher.Calligrapher;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -68,15 +70,15 @@ public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 }
         });
 
-        Call<ListGetColorModel> call1 = service.getColorData();
-        call1.enqueue(new Callback<ListGetColorModel>() {
+        Call<List<GetColorResponseModel>> call1 = service.getColorData();
+        call1.enqueue(new Callback<List<GetColorResponseModel>>() {
                 @Override
-                public void onResponse(Call<ListGetColorModel> call, Response<ListGetColorModel> response) {
+                public void onResponse(Call<List<GetColorResponseModel>> call, Response<List<GetColorResponseModel>> response) {
 
                 }
 
                 @Override
-                public void onFailure(Call<ListGetColorModel> call, Throwable t) {
+                public void onFailure(Call<List<GetColorResponseModel>> call, Throwable t) {
 
                 }
         });

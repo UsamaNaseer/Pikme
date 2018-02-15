@@ -6,6 +6,7 @@ package com.asadbaig.android.pikme;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -17,10 +18,15 @@ public interface ApiInterface {
     Call<GetProfileResposeModel> getProfileData(@Query("user_id") int id);
 
     @GET("getColors?op=getColors")
-    Call<ListGetColorModel> getColorData();
+    Call<List<GetColorResponseModel>> getColorData();
 
     @GET("getRides?op=getRides")
     Call<GetRidesResponseModel> getRidesData(@Query("user_id") int id);
+
+    @GET("getVehicleTypes?op=getVehicleTypes")
+    Call<List<GetVehiceTypeResponseModel>> getVehicleTypesData();
+
+
 
 
 

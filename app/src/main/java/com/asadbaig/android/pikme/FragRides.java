@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import java.util.List;
+
 import me.anwarshahriar.calligrapher.Calligrapher;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -59,6 +61,20 @@ findRide.setOnClickListener(new View.OnClickListener() {
 
             }
         });
+
+        Call<List<GetVehiceTypeResponseModel>> call1 = service.getVehicleTypesData();
+        call1.enqueue(new Callback<List<GetVehiceTypeResponseModel>>() {
+            @Override
+            public void onResponse(Call<List<GetVehiceTypeResponseModel>> call, Response<List<GetVehiceTypeResponseModel>> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<List<GetVehiceTypeResponseModel>> call, Throwable t) {
+
+            }
+        });
+
 
 
 
