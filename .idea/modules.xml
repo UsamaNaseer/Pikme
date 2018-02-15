@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Pikme.iml" filepath="$PROJECT_DIR$/Pikme.iml" />
+      <module fileurl="file://C:\Users\dell\Desktop\PikmeOrigin\Pikme.iml" filepath="C:\Users\dell\Desktop\PikmeOrigin\Pikme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PikmeOrigin.iml" filepath="$PROJECT_DIR$/PikmeOrigin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
