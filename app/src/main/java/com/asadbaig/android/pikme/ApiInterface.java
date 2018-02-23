@@ -26,8 +26,16 @@ public interface ApiInterface {
     @GET("getVehicleTypes?op=getVehicleTypes")
     Call<List<GetVehiceTypeResponseModel>> getVehicleTypesData();
 
+    @GET("checkUserExist?op=checkUserExist")
+    Call<CheckUserResponseModel> checkUserExist(@Query("email") String email);
 
+    @GET("deleteVehicle?op=deleteVehicle")
+    Call<CheckUserResponseModel> deleteVehicle(@Query("Vehicle_id") String vehicalId);
 
+    @GET("forgetPassword?op=forgetPassword")
+    Call<CheckUserResponseModel> forgetPassword(@Query("email") String email);
 
+    @GET("getBrands?op=getBrands")
+    Call<getBrandsResModel> getBrands();
 
 }
