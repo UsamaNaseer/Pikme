@@ -56,8 +56,8 @@
     </LinearLayout>
 
 
-    <include layout="@layout/list_item_history"/>
-    <include layout="@layout/list_item_history"/>
+    <include layout="@layout/history"/>
+
 
 
 </LinearLayout>

@@ -35,26 +35,64 @@
             android:layout_marginLeft="20dp"
             android:background="@color/white"
             >
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Shah Faisal Colony >> Defence Phase 7"
+                android:text="Shah Faisal Colony"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:textColor="@color/blue"
-                android:id="@+id/name"
+                android:id="@+id/from_place"
                 />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" >> "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:id="@+id/from1_place"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Defence Phase 7"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue"
+                    android:id="@+id/to_place"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3 December 2017 - After 11:00 1 `seat"
+                android:text="3 December 2017 - After 11:00 "
                 android:textSize="11sp"
                 android:textStyle="bold"
                 android:textColor="@color/darkGrey"
                 android:id="@+id/reserved_seat"
                 />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 1 seat"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/darkGrey"
+                    android:id="@+id/reserved1_seat"
+                    />
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,6 +126,7 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/rating"
                     android:text="3.0"/>
             </LinearLayout>
 
