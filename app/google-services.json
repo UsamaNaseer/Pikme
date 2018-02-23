@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "570015109301",
+    "firebase_url": "https://picknow-191021.firebaseio.com",
+    "project_id": "picknow-191021",
+    "storage_bucket": "picknow-191021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570015109301:android:b8fc733778071e5f",
+        "android_client_info": {
+          "package_name": "com.asadbaig.android.pikme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570015109301-p5beilsdf7kolcoodqo3dpcjvki0smq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3TJqy7US8wawcgNSa42mgzxc0wAMgHNo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
