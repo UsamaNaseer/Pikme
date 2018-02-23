@@ -1,24 +1,26 @@
 package com.asadbaig.android.pikme;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GetRidesResponseModel{
-	private List<Object> history;
-	private List<Object> current;
+	private HistoryItem[] current ;
+	private HistoryItem[] History;
 
-	public void setHistory(List<Object> history){
-		this.history = history;
+
+	public void setHistory(HistoryItem[] history){
+		this.History = history;
 	}
 
-	public List<Object> getHistory(){
-		return history;
+	public HistoryItem[] getHistory(){
+		return History;
 	}
 
-	public void setCurrent(List<Object> current){
+	public void setCurrent(HistoryItem[] current){
 		this.current = current;
 	}
 
-	public List<Object> getCurrent(){
+	public HistoryItem[] getCurrent(){
 		return current;
 	}
 
@@ -26,8 +28,8 @@ public class GetRidesResponseModel{
  	public String toString(){
 		return 
 			"GetRidesResponseModel{" + 
-			"history = '" + history + '\'' + 
-			",current = '" + current + '\'' + 
+			"current = '" + current + '\'' +
+			",history = '" + History + '\'' +
 			"}";
 		}
 }

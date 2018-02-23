@@ -44,23 +44,9 @@ findRide.setOnClickListener(new View.OnClickListener() {
     }
 });
 
-
         ApiInterface service = RetrofitBuilder.retrofit.create(ApiInterface.class);
-        Call<GetRidesResponseModel> call = service.getRidesData(2);
-        call.enqueue(new Callback<GetRidesResponseModel>() {
-            @Override
-            public void onResponse(Call<GetRidesResponseModel> call, Response<GetRidesResponseModel> response) {
-                GetRidesResponseModel getRidesResponseModel = response.body();
 
 
-
-            }
-
-            @Override
-            public void onFailure(Call<GetRidesResponseModel> call, Throwable t) {
-
-            }
-        });
 
         Call<List<GetVehiceTypeResponseModel>> call1 = service.getVehicleTypesData();
         call1.enqueue(new Callback<List<GetVehiceTypeResponseModel>>() {
