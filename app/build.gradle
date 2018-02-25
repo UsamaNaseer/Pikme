@@ -41,6 +41,8 @@ compile 'com.google.firebase:firebase-database:11.8.0'
     compile 'com.android.support:design:27.0.2'
     compile 'com.github.mukeshsolanki:country-picker-android:1.2.0'
     compile 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.google.android.gms:play-services-places:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
     compile 'com.google.code.gson:gson:2.8.2'
     testCompile 'junit:junit:4.12'
 }

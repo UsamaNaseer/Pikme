@@ -37,6 +37,10 @@
             android:name=".phoneNo"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".PlacesAutoCompleteActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".CodeVerifiy"
             android:screenOrientation="portrait" />
         <activity

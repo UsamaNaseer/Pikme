@@ -2,6 +2,7 @@ package com.asadbaig.android.pikme;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import me.anwarshahriar.calligrapher.Calligrapher;
 public class FragOffer extends android.support.v4.app.Fragment {
 Button btnCont;
 ImageView burger;
+    CardView cvOrigin,cvDest;
     public FragOffer() {
         // Required empty public constructor
     }
@@ -28,6 +30,8 @@ ImageView burger;
         Calligrapher calligrapher=new Calligrapher(getActivity());
         calligrapher.setFont(getActivity(),"Lato-Semibold.ttf",true);
 
+        cvOrigin=(CardView) rootView.findViewById(R.id.cvOrigin);
+        cvDest=(CardView) rootView.findViewById(R.id.cvDestination);
         btnCont=rootView.findViewById(R.id.btn_continue);
         btnCont.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +46,23 @@ ImageView burger;
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(getActivity(),navigationDrawer.class);
+                startActivity(i);
+            }
+        });
+
+
+        cvOrigin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),PlacesAutoCompleteActivity.class);
+                startActivity(i);
+            }
+        });
+
+        cvDest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getActivity(),PlacesAutoCompleteActivity.class);
                 startActivity(i);
             }
         });

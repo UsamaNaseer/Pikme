@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundColor"
+    android:layout_height="match_parent">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Search"
+    android:textSize="18sp"
+    android:padding="10dp"
+    android:background="@color/blue"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:textAlignment="center"
+    android:id="@+id/searchtext"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/searchtext"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+    <EditText
+        android:id="@+id/autocomplete_places"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_below="@+id/searchtext"
+        android:singleLine="true"
+        android:hint="Search Location"
+        android:drawableLeft="@drawable/current_location"
+        android:drawablePadding="9dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:text="Search"
+        android:layout_below="@+id/autocomplete_places"
+        android:textSize="16sp"
+        android:id="@+id/line"
+        android:textStyle="bold"
+        android:background="@color/separatorColor"
+        android:textAlignment="center"
+        />
+    <!--<EditText-->
+        <!--android:id="@+id/dropoff"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_below="@+id/line"-->
+        <!--android:singleLine="true"-->
+        <!--android:background="@color/colorBlack"-->
+        <!--android:hint="@string/dropOff"-->
+        <!--android:drawableLeft="@drawable/btn_search"-->
+        <!--android:drawablePadding="9dp"-->
+        <!--android:textColor="@color/colorWhite" />-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:text="Search"-->
+        <!--android:layout_below="@+id/dropoff"-->
+        <!--android:textSize="16sp"-->
+        <!--android:id="@+id/line2"-->
+        <!--android:textStyle="bold"-->
+        <!--android:background="@color/colorYellow"-->
+        <!--android:textAlignment="center"-->
+        <!--/>-->
+    <!--<ImageView-->
+        <!--android:id="@+id/cross"-->
+        <!--android:layout_width="16dp"-->
+        <!--android:layout_height="16dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginTop="26dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:src="@drawable/cross"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
